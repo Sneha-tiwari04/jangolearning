@@ -1,0 +1,16 @@
+
+ python -m venv env
+ cd env
+ cd scripts
+ cd ./activate
+ ./activate
+ cd ../../
+ pip install django
+ django-admin startproject projectname
+ python manage.py
+ python manage.py runserver
+ python manage.py startapp app
+ cd projectname
+ python manage.py runserver
+ python manage.py startapp app
+ 
