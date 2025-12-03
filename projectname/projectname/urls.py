@@ -19,6 +19,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from app import views
+from django.urls import reverse
+from urlibs.parse import urlencode
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,7 +34,10 @@ urlpatterns = [
    #path('my_render/<str:x>/',views.my_render,name='my_render')
    #path('my_render/<str:name>/<int:age>/<str:quali>/',views.my_render,name='my_render'),
    #path('my_json/',views.my_json,name='my_json'),
-   path('my_redirect/',views.my_redirect,name='my_redirect'),
+   #path('my_redirect/',views.my_redirect,name='my_redirect'),
+   path('my_redirect1/',views.my_redirect1,name='my_redirect'),
+   path('my_redirect2/',views.my_redirect2,name='my_redirect2'),
+   
    
 ]  
 

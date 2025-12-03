@@ -31,3 +31,13 @@ def my_json(req):
 def my_redirect(req):
     return redirect("https://www.linkedin.com/in/")
     return redirect('language')
+
+def my_redirect(req):
+    url=reverse('my_redirect')
+    data=urlencode({'name':'neeraj','age':37})
+    return redirect(f'{url}{data}')
+
+def my_redirect2(req):
+    print("Hello")
+    print(req.method)
+    print(req.GET)
