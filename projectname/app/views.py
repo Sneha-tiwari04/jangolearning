@@ -2,6 +2,8 @@ print("view page!!!")
 from django.shortcuts import render,redirect
 from django.http import HttpResponse,JsonResponse
 import json
+from django.urls import reverse
+from urllib.parse import urlencode
     #return HttpResponse("Hell,this is first django project")
     #return HttpResponse("<h1 style='color:pink;'>Hell,this is first django project</h1>")
 # Create your views here.
@@ -28,16 +30,17 @@ def my_json(req):
           }   
     return JsonResponse(data)
 
-def my_redirect(req):
-    return redirect("https://www.linkedin.com/in/")
-    return redirect('language')
+# def my_redirect(req):
+#     return redirect("https://www.linkedin.com/in/")
+#     return redirect('language')
 
-def my_redirect(req):
-    url=reverse('my_redirect')
+def my_redirect1(req):
+    url=reverse('my_redirect2')
     data=urlencode({'name':'neeraj','age':37})
-    return redirect(f'{url}{data}')
+    return redirect(f'{url}?{data}')
 
 def my_redirect2(req):
     print("Hello")
-    print(req.method)
+    # print(req.method)
     print(req.GET)
+    
