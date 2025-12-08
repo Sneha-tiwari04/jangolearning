@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zomato Clone – Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+
+<nav class="w-full bg-white shadow-sm fixed top-0 left-0 z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+    <div class="flex items-center gap-3">
+      <img src="{% static 'images/logo.png' %}" class="h-10 w-10 rounded" />
+      <span class="text-2xl font-bold text-red-500">Zomato</span>
+    </div>
+
+    <ul class="hidden md:flex gap-6 text-lg font-medium">
+      <li class="hover:text-red-500 cursor-pointer">Home</li>
+      <li class="hover:text-red-500 cursor-pointer">Order Online</li>
+      <li class="hover:text-red-500 cursor-pointer">Dining</li>
+      <li class="hover:text-red-500 cursor-pointer">About</li>
+    </ul>
+
+    <div class="flex items-center gap-4">
+      <button class="text-gray-700 hover:text-red-500">Login</button>
+      <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+        Sign Up
+      </button>
+    </div>
+  </div>
+</nav>
+
+
+<section
+  class="h-[70vh] bg-cover bg-center flex flex-col justify-center items-center text-white"
+  style="background-image: url('{% static '/images/n4.png' %}'); margin-top: 4rem;">
+  <h1 class="text-5xl font-bold drop-shadow-lg">Discover the best food & drinks</h1>
+
+  <div class="bg-white shadow-lg rounded flex items-center mt-8 p-2 w-[80%] md:w-[50%]">
+    <input
+      type="text"
+      class="flex-1 px-4 py-3 outline-none"
+      placeholder="Search for restaurants or dishes..."
+    />
+    <button class="bg-red-500 text-white px-5 py-3 rounded">Search</button>
+  </div>
+</section>
+
+<!-- ================= POPULAR CATEGORIES ================= -->
+<section class="max-w-6xl mx-auto mt-16 px-4">
+  <h2 class="text-2xl font-bold mb-6">Inspiration for your first order</h2>
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+    <div class="bg-white rounded shadow hover:shadow-lg cursor-pointer">
+      <img src="{% static 'images/biryani.jpg' %}" class="h-40 w-full object-cover rounded-t" />
+      <p class="text-center py-3 font-medium">Biryani</p>
+    </div>
+    <div class="bg-white rounded shadow hover:shadow-lg cursor-pointer">
+      <img src="{% static 'images/pizza.jpg' %}" class="h-40 w-full object-cover rounded-t" />
+      <p class="text-center py-3 font-medium">Pizza</p>
+    </div>
+    <div class="bg-white rounded shadow hover:shadow-lg cursor-pointer">
+      <img src="{% static 'images/chinese.jpg' %}" class="h-40 w-full object-cover rounded-t" />
+      <p class="text-center py-3 font-medium">Chinese</p>
+    </div>
+    <div class="bg-white rounded shadow hover:shadow-lg cursor-pointer">
+      <img src="{% static 'images/coffee.jpg' %}" class="h-40 w-full object-cover rounded-t" />
+      <p class="text-center py-3 font-medium">Coffee</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TOP COLLECTIONS ================= -->
+<section class="max-w-6xl mx-auto mt-16 px-4">
+  <h2 class="text-2xl font-bold mb-6">Collections</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    
+    <div class="relative group cursor-pointer">
+      <img src="{% static 'images/collection2.jpg' %}"
+       class="h-52 w-full object-cover rounded-xl brightness-75 group-hover:brightness-50" />
+      <div class="absolute bottom-4 left-4 text-white">
+        <h3 class="text-lg font-semibold">Trending This Week</h3>
+        <p class="text-sm">15 Places</p>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- ================= RESTAURANT LIST ================= -->
+<section class="max-w-6xl mx-auto mt-16 px-4">
+  <h2 class="text-2xl font-bold mb-6">Best Restaurants Near You</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    
+    <div class="bg-white shadow rounded-lg overflow-hidden hover:shadow-xl duration-300">
+      <img
+        src="{% static '/images/restaurant1.jpg' %}"
+        class="h-40 w-full object-cover"
+      />
+      <div class="p-4">
+        <h3 class="font-semibold text-lg">Restaurant {{ i|add:1 }}</h3>
+        <p class="text-gray-500 text-sm">Chinese • Fast Food</p>
+
+        <div class="flex justify-between mt-3 items-center">
+          <span class="bg-green-600 text-white px-2 py-1 rounded text-sm">4.1 ★</span>
+          <span class="text-sm text-gray-700">₹300 for two</span>
+        </div>
+
+        <button class="mt-4 w-full border rounded py-2 hover:bg-gray-100">Order Now</button>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-white shadow mt-20">
+  <div class="max-w-6xl mx-auto p-6 text-center text-gray-600">
+    © 2025 Zomato Clone • Made for learning • Sneha ❤️
+  </div>
+</footer>
+
+</body>
+</html>
+{% endblock content %}
+

@@ -1,0 +1,51 @@
+{% extends 'landing.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<section class="h-[60vh] bg-cover bg-center"
+style="background-image: url('{% static 'images/m4.png' %}');">
+    <div class="h-full bg-black bg-opacity-40 flex justify-center items-center">
+        <h1 class="text-5xl text-white font-bold drop-shadow-lg">
+            Discover the best food near you
+        </h1>
+    </div>
+</section>
+
+<!-- CATEGORIES -->
+<div class="container mx-auto mt-10 px-6">
+    <h2 class="text-3xl font-bold mb-4">Eat What Makes You Happy</h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        
+        <div class="bg-white p-4 rounded-lg shadow hover:scale-105 duration-300">
+            <img src="{% static 'images/m2.png' %}" class="rounded-md h-32 w-full object-cover">
+            <h3 class="mt-2 text-lg font-semibold">{{ food }}</h3>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<!-- TOP RESTAURANTS -->
+<div class="container mx-auto mt-12 px-6">
+    <h2 class="text-3xl font-bold mb-4">Top Restaurants</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        
+        <div class="bg-white shadow-lg rounded-lg">
+            <img src="{% static 'images/m3.png' %}" class="h-48 w-full object-cover rounded-t-lg">
+            <div class="p-4">
+                <h3 class="text-xl font-bold">{{ r }}</h3>
+                <p class="text-gray-600">⭐ 4.5 • 30 mins</p>
+            </div>
+        </div>
+        
+
+    </div>
+</div>
+
+{% endblock content %}
