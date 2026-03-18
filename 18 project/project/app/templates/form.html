@@ -1,0 +1,13 @@
+
+
+<form method="POST">
+    {% csrf_token %}
+    
+    Name: {{ form.name }} <br><br>
+    Email: {{ form.email }} <br><br>
+    User: {{ form.user }} <br><br>
+    Password: {{ form.password }} <br><br>
+    Mobile: {{ form.mobile }} <br><br>
+
+    <button type="submit">Submit</button>
+</form>
