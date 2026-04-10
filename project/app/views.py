@@ -4,9 +4,9 @@ from django.views import View
 # Create your views here.
 class ProductView(View):
     def get(self, request):
-        topwears = Product.objects.filter(category='TW')
+        topwears = Product.objects.filter(category='TW' )
         bottomwears = Product.objects.filter(category='BW')
-        mobiles = Product.objects.filter(category='M' )
+        mobiles = Product.objects.filter(category='M')
         return render(request, 'app/home.html', 
         {'topwears': topwears, 'bottomwears': bottomwears, 
         'mobiles': mobiles})
