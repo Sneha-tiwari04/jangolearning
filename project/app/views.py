@@ -8,7 +8,7 @@ class ProductView(View):
         bottomwears = Product.objects.filter(category='BW')
         mobiles = Product.objects.filter(category='M')
         return render(request, 'app/home.html', 
-        {'topwears': topwears, 'bottomwears': bottomwears, 
+        {'topwears': topwears,'bottomwears': bottomwears, 
         'mobiles': mobiles})
     
 
