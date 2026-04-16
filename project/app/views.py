@@ -9,7 +9,7 @@ class ProductView(View):
         mobiles = Product.objects.filter(category='M')
         return render(request, 'app/home.html', 
         {'topwears': topwears,'bottomwears': bottomwears, 
-        'mobiles': mobiles})
+        'mobiles': mobiles}) 
     
 
 # def product_detail(request):
